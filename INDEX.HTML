@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Oscar Valadez Delgado</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #0f0f1c;
+      --neon-blue: #00ffe7;
+      --neon-pink: #ff007f;
+      --btn-color: #1a1a2e;
+      --hover-color: #29293d;
+      --shadow: 0 0 10px #00ffe7, 0 0 20px #00ffe7;
+      --text-shadow: 0 0 5px #00ffe7;
+      --error: #ff4d4d;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      font-family: 'Orbitron', sans-serif;
+      color: var(--neon-blue);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      width: 100%;
+      background-color: #1a1a2e;
+      box-shadow: 0 0 8px #00ffe7;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px 0;
+    }
+
+    .navbar .dropdown {
+      position: relative;
+      margin: 0 15px;
+    }
+
+    .navbar a, .dropbtn {
+      color: var(--neon-blue);
+      text-decoration: none;
+      padding: 10px 16px;
+      border: 1px solid var(--neon-blue);
+      border-radius: 6px;
+      background-color: transparent;
+      display: inline-block;
+      cursor: pointer;
+      text-shadow: var(--text-shadow);
+      transition: background-color 0.3s ease;
+    }
+
+    .navbar a:hover, .dropbtn:hover {
+      background-color: var(--neon-blue);
+      color: black;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #111122;
+      box-shadow: 0 0 15px #00ffe7;
+      border-radius: 8px;
+      top: 110%;
+      left: 0;
+      min-width: 180px;
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px 16px;
+      color: var(--neon-blue);
+      text-decoration: none;
+      border-bottom: 1px solid #222;
+      transition: background 0.3s;
+    }
+
+    .dropdown-content a:hover {
+      background-color: var(--neon-blue);
+      color: black;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    h1, h3 {
+      text-align: center;
+      margin: 20px 0 10px;
+      text-shadow: var(--text-shadow);
+    }
+
+    /* CALCULADORA */
+    .calc {
+      background: linear-gradient(145deg, #141426, #0c0c19);
+      box-shadow: 0 0 20px #00ffe7;
+      padding: 30px;
+      border-radius: 20px;
+      margin-top: 30px;
+      width: 90%;
+      max-width: 400px;
+    }
+
+    .calc input[type="text"] {
+      width: 100%;
+      height: 60px;
+      font-size: 28px;
+      text-align: right;
+      border: none;
+      border-radius: 10px;
+      padding-right: 15px;
+      background-color: #050510;
+      color: var(--neon-blue);
+      box-shadow: inset 0 0 10px #00ffe7;
+      margin-bottom: 20px;
+    }
+
+    .calc input[type="text"].error {
+      color: var(--error);
+      box-shadow: inset 0 0 10px var(--error);
+    }
+
+    .btn {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .btn input[type="button"] {
+      height: 60px;
+      font-size: 20px;
+      border: none;
+      border-radius: 10px;
+      background-color: var(--btn-color);
+      color: var(--neon-blue);
+      box-shadow: 0 0 10px #00ffe7;
+      text-shadow: var(--text-shadow);
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn input[type="button"]:hover {
+      background-color: var(--hover-color);
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #00ffe7;
+    }
+
+    .btn input[type="button"]:active {
+      transform: scale(0.95);
+    }
+
+    .btn input[type="button"][value="="] {
+      grid-column: span 2;
+      background-color: var(--neon-pink);
+      color: black;
+      font-weight: bold;
+      box-shadow: 0 0 15px var(--neon-pink), 0 0 30px var(--neon-pink);
+    }
+
+    @media (max-width: 450px) {
+      .calc {
+        padding: 20px;
+      }
+      .btn input[type="button"] {
+        font-size: 18px;
+        height: 50px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR CON MENÚS DESPLEGABLES -->
+  <div class="navbar">
+    <a href="index.html">Inicio</a>
+
+    <div class="dropdown">
+      <button class="dropbtn">Unidad 1</button>
+      <div class="dropdown-content">
+        <a href="unidad1-conceptos.html">Conceptos</a>
+        <a href="unidad1-ataques.html">Ataques</a>
+        <a href="unidad1-proteccion.html">Protección</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">Unidad 2</button>
+      <div class="dropdown-content">
+        <a href="unidad2-conceptos.html">Conceptos</a>
+        <a href="unidad2-ataques.html">Ataques</a>
+        <a href="unidad2-proteccion.html">Protección</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">Unidad 3</button>
+      <div class="dropdown-content">
+        <a href="unidad3-conceptos.html">Conceptos</a>
+        <a href="unidad3-ataques.html">Ataques</a>
+        <a href="unidad3-proteccion.html">Protección</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ENCABEZADO -->
+  <h1>Oscar Valadez Delgado</h1>
+  <h3>Programación 5A - Construye páginas web</h3>
+
+  <!-- CALCULADORA -->
+  <div class="calc">
+    <input type="text" id="ans" readonly>
+    <div class="btn">
+      <input type="button" value="C" onclick="Clear()">
+      <input type="button" value="%" onclick="Solve('%')">
+      <input type="button" value="←" onclick="Back()">
+      <input type="button" value="/" onclick="Solve('/')">
+
+      <input type="button" value="7" onclick="Solve('7')">
+      <input type="button" value="8" onclick="Solve('8')">
+      <input type="button" value="9" onclick="Solve('9')">
+      <input type="button" value="*" onclick="Solve('*')">
+
+      <input type="button" value="4" onclick="Solve('4')">
+      <input type="button" value="5" onclick="Solve('5')">
+      <input type="button" value="6" onclick="Solve('6')">
+      <input type="button" value="-" onclick="Solve('-')">
+
+      <input type="button" value="1" onclick="Solve('1')">
+      <input type="button" value="2" onclick="Solve('2')">
+      <input type="button" value="3" onclick="Solve('3')">
+      <input type="button" value="+" onclick="Solve('+')">
+
+      <input type="button" value="0" onclick="Solve('0')">
+      <input type="button" value="." onclick="Solve('.')">
+      <input type="button" value="=" onclick="Result()">
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script>
+    const output = document.getElementById("ans");
+
+    function Solve(val) {
+      output.classList.remove('error');
+      output.value += val;
+    }
+
+    function Result() {
+      try {
+        output.value = eval(output.value);
+        output.classList.remove('error');
+      } catch {
+        output.value = "Error";
+        output.classList.add('error');
+      }
+    }
+
+    function Clear() {
+      output.value = "";
+      output.classList.remove('error');
+    }
+
+    function Back() {
+      output.value = output.value.slice(0, -1);
+      output.classList.remove('error');
+    }
+
+    // Teclado
+    document.addEventListener('keydown', function(e) {
+      const key = e.key;
+
+      if (!isNaN(key) || "+-*/.%".includes(key)) {
+        Solve(key);
+      } else if (key === "Enter") {
+        e.preventDefault();
+        Result();
+      } else if (key === "Backspace") {
+        e.preventDefault();
+        Back();
+      } else if (key === "Delete") {
+        e.preventDefault();
+        Clear();
+      }
+    });
+  </script>
+
+</body>
+</html>
+
