@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Remy Lebeau</title>
+  
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y5PTFmhCaXp0Ml5d60M17uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  <style>
+    /* ========== BASE ========== */
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: #ffffff;
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3em;
+      margin-top: 30px;
+      color: #00f0ff;
+      text-shadow: 0 0 15px #00f0ff;
+    }
+
+    /* ========== TABLE STYLES ========== */
+    table {
+      margin: 30px auto;
+      width: 90%;
+      max-width: 1000px;
+      border-radius: 15px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+    }
+
+    td, th {
+      padding: 15px;
+      color: #ffffff;
+    }
+
+    td p, th {
+      margin: 5px 0;
+    }
+
+    tr:nth-child(even) {
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    th {
+      background-color: rgba(0, 0, 0, 0.4);
+      color: #00ffff;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    /* ========== IMAGE ========== */
+    img.perfil {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      border: 6px solid #00f0ff;
+      box-shadow: 0 0 25px #00f0ff;
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* ========== SECTION TITLES ========== */
+    td[colspan="2"] {
+      text-align: center;
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #ff00f7;
+      background-color: rgba(0, 0, 0, 0.6);
+      text-shadow: 0 0 10px #ff00f7;
+    }
+
+    i {
+      color: #00ffff;
+      margin-right: 10px;
+    }
+
+    .info-label {
+      color: #cccccc;
+      font-size: 0.95em;
+    }
+
+    hr {
+      border: none;
+      height: 2px;
+      background: linear-gradient(to right, #00f0ff, #ff00f7);
+      width: 80%;
+      margin: 40px auto;
+      border-radius: 2px;
+      box-shadow: 0 0 10px #00f0ff;
+    }
+
+    @media screen and (max-width: 768px) {
+      img.perfil {
+        width: 180px;
+        height: 180px;
+      }
+
+      table {
+        width: 95%;
+      }
+
+      td, th {
+        font-size: 0.9em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>El de 5-A</h1>
+
+  <table>
+    <tr>
+      <td>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALUAAACUCAMAAADifZgIAAAAsVBMVEUdtT4AAAAHPh8GPx4iXjUgtTgIEA0IOiEavTsru04IPSEXPiA4vU4QOyUFCAUVVSQBLQ4fs0Ejoj8oukgsh0QKGRIAKAggvEIphjoVLxgtgz4gpTsisUM0rUcIFQ4jXjA0sEQebCwIJw8pjzsRViAfZCsOIxkCMxchkjpDwFgecywhYS0aLyAcOSAue0MyuVIRTBQAIQADMBs5hkcALQANMSUEQhoVUScEHQwTJhU4p0n7MxfkAAAEtUlEQVR4nO2ci1raMBSAQ2toyMql6ySoOC6i3YpbN1S2+f4PtiZtRXpJMgypGfm/OS6a5O/5DmnJCQBgsVgsFovFYrFYLEIC9R0FQX2ngbLBSECgEHE3UwCD13/OblH+83JDlGnPe0KSRDjcFJH0D8P9dvlD3395QuL4pej9GI9E/LxBUBQk9IX2M2awO8vleDQeLVPowyXjhyrtcIidFJfi0H/pffqf4+weRxMisIYATqK8F9fdbrduAWZPuLRH1xsqsoZk5WCM6XhOI9ENEXUTkJuI00OOSus8Km+1HrHDN8kaBOjLCGu1pvnhOG+2joTSiq0d/nhS1jeRoBfF1lTaw5wxJaxBmte4EeXWYZrXGPf7HvYa2UxkrDee169t3vd21kqkU+uhkwW7fz7oNtC5FJ1kYIAmnW5DB4PzPNreqqfmjJ5b00nrc6cROetGPucpgldqY00551iLLkMkrdXldWGNj2/trBRap7M1faHzrEWDiayx6jlEylrYjbWWtnaObH20OeSY1m5hrXi+1mRtYqyV57W1ttb/m7Wd+QTWJz/z6bNWfKVqYKyttT5ribwWLgRrft/IVnFE1p+I0Jp84lljxTOfVmuVGZItaXHXQwgQDMe17tIBsEJrkAyLCkfzqJ0H3+/5lKzMUiJ9Jkz8S077bIDlz1WiKNZgmmuESZL49GefMPT9r/Hj4yM7uKzqMi4xGj2OxvHXyuHsjiurKiWAiBcM5bQherlHK2wI5YW6XQEOhPGTR5dcMVvBrKyYejTBnmLQUGVksWFdIaSocheAl/JmwIqbr4uLxcMwpjUXVk+oX1l3nW0Uh1kXdbC+ZMqWKgnjjeu4XLZOHCqrEqshjD2BNYu1edauFys6gyiDWnNLLnTxilprzlw+YYx5sca0duu+Q+uN1xewYdbvSbu37gy4dLuDzvq9WYdrztm6wEzrW2utAnnrtk1f05Oyft1CbrOUaui1Hyo2WiG5WJP8ajFr037YiZx1q47wqsz1TMJ6XWl2pdU6/jUscSFhfVFu9CvWar3YlHdd3ElY/y41wpuFzktXuIic0nssOet93Ggx1WvNdt/tLp6lrO9w6VLQ0xxrr9j1k1tLZchdsSewOFZvoVEagIp1XzrW7VnD24Osf7ttx9rNN4FmS8RYzhrnGxl3ea3X+p6+c8m2h2VIZUh5g9nTrXgodcBZp7JLTMK6ssGsM9N4joewev6Wsa6i1RoU1oPS7fu2PjvQsmKt8WrVWhtprfF95Klbn2lzttY2Q6z1/2g9M9LazFibaW3mzGem9ZnGVZxTz2szre18ba35tD3z3X/49u0Dj/TX9zXW+qiz/n519bGRvHT0vdKq7Qy5RNnXO4C6b47IvvyhZhdi29YTFPBTFIIa67Yz5DBrM2NtpnXbM98ETY3M60Os28+Q07E2M0PMtLYZIkKltYnztZkZYq1FnPqr0cxYt28tuFKt/RyYtRahzlrrq5EckNftW8NZZR/LJTrkU5kzonM7c3UH0QMSNAmm5KGa1zpX3eHtn4t9/kxEnyVNZ75JpdVak3HG/Hl+vcfzHIqsAzi9nu9IG82fr5s/8HgM/v3rVOtatb9H32KxWCyWMn8B2RylWABRtHMAAAAASUVORK5CYII=" alt="Perfil Predeterminado" class="perfil">
+
+      </td>
+      <td>
+        <p>Género: <b>Masculino</b></p>
+        <p>Raza: <b>Humano</b></p>
+        <p>Nacimiento: <b>30/12/08</b></p>
+        <p>Calle: <b>Margaritas</b></p>
+        <p>Ciudad: <b>Reynosa</b></p>
+        <p>Teléfono: <b>123456</b></p>
+        <p>Celular: <b>123456</b></p>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">Oscar Valadez Delgado</td>
+    </tr>
+  </table>
+
+  <hr>
+
+  <table>
+    <tr>
+      <td colspan="2">
+        <i class="fa fa-user"></i> INFORMACIÓN BÁSICA
+        <i class="fa fa-question-circle"></i>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p class="info-label">Email</p>
+        <p class="info-label">Altura</p>
+        <p class="info-label">Peso</p>
+        <p class="info-label">Color de pelo</p>
+        <p class="info-label">Tipo de sangre</p>
+        <p class="info-label">Signo Zodiacal</p>
+        <p class="info-label">Apellido Materno</p>
+        <p class="info-label">Estado Civil</p>
+        <p class="info-label">Educación</p>
+        <p class="info-label">Historial de Enfermedades</p>
+      </td>
+      <td>
+        <p>oscarpro@gmail.com</p>
+        <p>1.80 m</p>
+        <p>90 kg</p>
+        <p>Negro</p>
+        <p>O+</p>
+        <p>Capricornio</p>
+        <p>Delgado</p>
+        <p>Solo:(</p>
+        <p>Preparatoria</p>
+        <p>Ninguna enfermedad</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="2">
+        <i class="fa fa-check-square"></i> INFORMACIÓN DE EMPLEADO
+        <i class="fa fa-question-circle"></i>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p class="info-label">Estado de Empleado</p>
+        <p class="info-label">Salario Mensual</p>
+        <p class="info-label">Ocupación</p>
+        <p class="info-label">Nombre de la Empresa</p>
+        <p class="info-label">Tamaño de la Empresa</p>
+        <p class="info-label">Industria</p>
+      </td>
+      <td>
+        <p>Tiempo completo</p>
+        <p>$100,000</p>
+        <p>Botarga</p>
+        <p>Botargas.inc</p>
+        <p>100 empleados</p>
+        <p>Disneyland</p>
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>
