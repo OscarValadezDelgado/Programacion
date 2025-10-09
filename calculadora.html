@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Oscar Valadez Delgado</title>
+  <title>Calculadora - Oscar Valadez Delgado</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+
   <style>
     :root {
       --bg-color: #0f0f1c;
@@ -26,17 +28,22 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      min-height: 100vh;
     }
 
     /* NAVBAR */
     .navbar {
       width: 100%;
-      background-color: #1a1a2e;
-      box-shadow: 0 0 8px #00ffe7;
+      background-color: rgba(26, 26, 46, 0.9);
+      box-shadow: 0 0 10px var(--neon-blue);
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(6px);
     }
 
     .navbar .dropdown {
@@ -54,19 +61,20 @@
       display: inline-block;
       cursor: pointer;
       text-shadow: var(--text-shadow);
-      transition: background-color 0.3s ease;
+      transition: all 0.3s ease;
     }
 
     .navbar a:hover, .dropbtn:hover {
       background-color: var(--neon-blue);
       color: black;
+      box-shadow: 0 0 15px var(--neon-blue);
     }
 
     .dropdown-content {
       display: none;
       position: absolute;
       background-color: #111122;
-      box-shadow: 0 0 15px #00ffe7;
+      box-shadow: 0 0 15px var(--neon-blue);
       border-radius: 8px;
       top: 110%;
       left: 0;
@@ -92,9 +100,10 @@
       display: block;
     }
 
+    /* ENCABEZADO */
     h1, h3 {
       text-align: center;
-      margin: 20px 0 10px;
+      margin: 25px 0 10px;
       text-shadow: var(--text-shadow);
     }
 
@@ -178,7 +187,7 @@
 </head>
 <body>
 
-  <!-- NAVBAR CON MENÚS DESPLEGABLES -->
+  <!-- 🌐 NAVBAR NEÓN -->
   <div class="navbar">
     <a href="index.html">Inicio</a>
 
@@ -186,7 +195,7 @@
       <button class="dropbtn">Unidad 1</button>
       <div class="dropdown-content">
         <a href="unidad1-Conceptos.html">Conceptos</a>
-        <a href="unidad1- Tabla Ataques.html">Ataques</a>
+        <a href="unidad1-Tabla Ataques.html">Ataques</a>
         <a href="unidad1-Proteccion.html">Protección</a>
       </div>
     </div>
@@ -208,11 +217,13 @@
         <a href="unidad3-proteccion.html">Protección</a>
       </div>
     </div>
+
+    <a href="perfil.html">Perfil</a>
   </div>
 
   <!-- ENCABEZADO -->
   <h1>Oscar Valadez Delgado</h1>
-  <h3>Programación 5A - Construye páginas web</h3>
+  <h3>Programación 5A - Calculadora Neón</h3>
 
   <!-- CALCULADORA -->
   <div class="calc">
@@ -244,7 +255,7 @@
     </div>
   </div>
 
-  <!-- SCRIPTS -->
+  <!-- SCRIPT -->
   <script>
     const output = document.getElementById("ans");
 
@@ -291,8 +302,9 @@
       }
     });
   </script>
-
 </body>
 </html>
+
+
 
 
