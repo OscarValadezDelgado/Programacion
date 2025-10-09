@@ -39,12 +39,13 @@
         margin: 0;
         padding: 0;
         font-family: Arial, sans-serif;
-        color: white; /* Para que el texto sea visible sobre el fondo oscuro */
+        color: white;
       }
 
       .jumbotron {
-        background-color: rgba(246, 246, 253, 0.6); /* semi-transparente */
+        background-color: rgba(246, 246, 253, 0.6);
         color: black;
+        text-align: center;
       }
 
       .navbar {
@@ -60,6 +61,21 @@
         color: black;
       }
 
+      .btn-calculadora {
+        background-color: var(--tiffany-blue);
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn-calculadora:hover {
+        background-color: var(--yinmn-blue);
+        color: white;
+      }
     </style>
   </head>
 
@@ -141,12 +157,15 @@
       <h1 class="display-4">Mi página web personal</h1>
       <p class="lead">5-A Programacion</p>
       <hr class="my-4" />
-      <p>
-        Primera pagina de OscarGod
-      </p>
+      <p>Primera pagina de OscarGod</p>
       <p class="lead">
         <a class="btn btn-primary btn-lg" href="#" role="button">Continuar</a>
       </p>
+
+      <!-- 🔹 Nuevo botón para ir a la calculadora -->
+      <a href="calculadora.html" class="btn-calculadora">Ir a la Calculadora</a>
     </div>
   </body>
 </html>
+
+
