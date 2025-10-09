@@ -10,7 +10,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y5PTFmhCaXp0Ml5d60M17uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 
   <style>
     /* ========== BASE ========== */
@@ -32,12 +37,56 @@
     h1 {
       text-align: center;
       font-size: 3em;
-      margin-top: 30px;
+      margin-top: 80px;
       color: #00f0ff;
       text-shadow: 0 0 15px #00f0ff;
     }
 
-    /* ========== TABLE STYLES ========== */
+    /* ========== NAVBAR PERSONALIZADA ========== */
+    .navbar-custom {
+      background: rgba(0, 0, 0, 0.4);
+      border: none;
+      box-shadow: 0 0 15px #00f0ff;
+    }
+
+    .navbar-custom .navbar-brand {
+      color: #00f0ff !important;
+      font-weight: bold;
+      text-shadow: 0 0 10px #00f0ff;
+    }
+
+    .navbar-custom .navbar-brand:hover {
+      color: #ff00f7 !important;
+    }
+
+    .navbar-custom .nav > li > a {
+      color: #ffffff !important;
+      text-shadow: 0 0 6px #00ffff;
+      transition: 0.3s;
+    }
+
+    .navbar-custom .nav > li > a:hover {
+      color: #ff00f7 !important;
+      text-shadow: 0 0 10px #ff00f7;
+    }
+
+    .dropdown-menu {
+      background-color: rgba(20, 20, 40, 0.9);
+      border: 1px solid #00f0ff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #00f0ff;
+    }
+
+    .dropdown-menu a {
+      color: #00f0ff !important;
+    }
+
+    .dropdown-menu a:hover {
+      background-color: #ff00f7;
+      color: white !important;
+    }
+
+    /* ========== TABLAS Y ELEMENTOS ========== */
     table {
       margin: 30px auto;
       width: 90%;
@@ -69,7 +118,6 @@
       letter-spacing: 1px;
     }
 
-    /* ========== IMAGE ========== */
     img.perfil {
       width: 250px;
       height: 250px;
@@ -80,7 +128,6 @@
       margin: 0 auto;
     }
 
-    /* ========== SECTION TITLES ========== */
     td[colspan="2"] {
       text-align: center;
       font-size: 1.5em;
@@ -126,7 +173,31 @@
     }
   </style>
 </head>
+
 <body>
+
+  <!-- 🌐 Barra de Navegación Neón -->
+  <nav class="navbar navbar-custom navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">Inicio</a>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarMenu">
+          <span class="icon-bar" style="background: #00f0ff;"></span>
+          <span class="icon-bar" style="background: #00f0ff;"></span>
+          <span class="icon-bar" style="background: #00f0ff;"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="nav navbar-nav">
+          <li><a href="unidad1.html">Unidad 1</a></li>
+          <li><a href="unidad2.html">Unidad 2</a></li>
+          <li><a href="unidad3.html">Unidad 3</a></li>
+          <li><a href="calculadora.html">Calculadora</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
   <h1>El de 5-A</h1>
 
@@ -134,7 +205,6 @@
     <tr>
       <td>
         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALUAAACUCAMAAADifZgIAAAAsVBMVEUdtT4AAAAHPh8GPx4iXjUgtTgIEA0IOiEavTsru04IPSEXPiA4vU4QOyUFCAUVVSQBLQ4fs0Ejoj8oukgsh0QKGRIAKAggvEIphjoVLxgtgz4gpTsisUM0rUcIFQ4jXjA0sEQebCwIJw8pjzsRViAfZCsOIxkCMxchkjpDwFgecywhYS0aLyAcOSAue0MyuVIRTBQAIQADMBs5hkcALQANMSUEQhoVUScEHQwTJhU4p0n7MxfkAAAEtUlEQVR4nO2ci1raMBSAQ2toyMql6ySoOC6i3YpbN1S2+f4PtiZtRXpJMgypGfm/OS6a5O/5DmnJCQBgsVgsFovFYrFYLEIC9R0FQX2ngbLBSECgEHE3UwCD13/OblH+83JDlGnPe0KSRDjcFJH0D8P9dvlD3395QuL4pej9GI9E/LxBUBQk9IX2M2awO8vleDQeLVPowyXjhyrtcIidFJfi0H/pffqf4+weRxMisIYATqK8F9fdbrduAWZPuLRH1xsqsoZk5WCM6XhOI9ENEXUTkJuI00OOSus8Km+1HrHDN8kaBOjLCGu1pvnhOG+2joTSiq0d/nhS1jeRoBfF1lTaw5wxJaxBmte4EeXWYZrXGPf7HvYa2UxkrDee169t3vd21kqkU+uhkwW7fz7oNtC5FJ1kYIAmnW5DB4PzPNreqqfmjJ5b00nrc6cROetGPucpgldqY00551iLLkMkrdXldWGNj2/trBRap7M1faHzrEWDiayx6jlEylrYjbWWtnaObH20OeSY1m5hrXi+1mRtYqyV57W1ttb/m7Wd+QTWJz/z6bNWfKVqYKyttT5ribwWLgRrft/IVnFE1p+I0Jp84lljxTOfVmuVGZItaXHXQwgQDMe17tIBsEJrkAyLCkfzqJ0H3+/5lKzMUiJ9Jkz8S077bIDlz1WiKNZgmmuESZL49GefMPT9r/Hj4yM7uKzqMi4xGj2OxvHXyuHsjiurKiWAiBcM5bQherlHK2wI5YW6XQEOhPGTR5dcMVvBrKyYejTBnmLQUGVksWFdIaSocheAl/JmwIqbr4uLxcMwpjUXVk+oX1l3nW0Uh1kXdbC+ZMqWKgnjjeu4XLZOHCqrEqshjD2BNYu1edauFys6gyiDWnNLLnTxilprzlw+YYx5sca0duu+Q+uN1xewYdbvSbu37gy4dLuDzvq9WYdrztm6wEzrW2utAnnrtk1f05Oyft1CbrOUaui1Hyo2WiG5WJP8ajFr037YiZx1q47wqsz1TMJ6XWl2pdU6/jUscSFhfVFu9CvWar3YlHdd3ElY/y41wpuFzktXuIic0nssOet93Ggx1WvNdt/tLp6lrO9w6VLQ0xxrr9j1k1tLZchdsSewOFZvoVEagIp1XzrW7VnD24Osf7ttx9rNN4FmS8RYzhrnGxl3ea3X+p6+c8m2h2VIZUh5g9nTrXgodcBZp7JLTMK6ssGsM9N4joewev6Wsa6i1RoU1oPS7fu2PjvQsmKt8WrVWhtprfF95Klbn2lzttY2Q6z1/2g9M9LazFibaW3mzGem9ZnGVZxTz2szre18ba35tD3z3X/49u0Dj/TX9zXW+qiz/n519bGRvHT0vdKq7Qy5RNnXO4C6b47IvvyhZhdi29YTFPBTFIIa67Yz5DBrM2NtpnXbM98ETY3M60Os28+Q07E2M0PMtLYZIkKltYnztZkZYq1FnPqr0cxYt28tuFKt/RyYtRahzlrrq5EckNftW8NZZR/LJTrkU5kzonM7c3UH0QMSNAmm5KGa1zpX3eHtn4t9/kxEnyVNZ75JpdVak3HG/Hl+vcfzHIqsAzi9nu9IG82fr5s/8HgM/v3rVOtatb9H32KxWCyWMn8B2RylWABRtHMAAAAASUVORK5CYII=" alt="Perfil Predeterminado" class="perfil">
-
       </td>
       <td>
         <p>Género: <b>Masculino</b></p>
@@ -181,7 +251,7 @@
         <p>O+</p>
         <p>Capricornio</p>
         <p>Delgado</p>
-        <p>Solo:(</p>
+        <p>Soltero :(</p>
         <p>Preparatoria</p>
         <p>Ninguna enfermedad</p>
       </td>
@@ -215,3 +285,5 @@
 
 </body>
 </html>
+
+
