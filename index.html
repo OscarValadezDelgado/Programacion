@@ -79,6 +79,16 @@
         color: white;
       }
     </style>
+
+    <script>
+      function abrirVentanaEmergente() {
+        window.open(
+          'perfil.html',
+          'Perfil',
+          'width=600,height=400,resizable=yes,scrollbars=yes'
+        );
+      }
+    </script>
   </head>
 
   <body>
@@ -161,15 +171,22 @@
       <hr class="my-4" />
       <p>Primera pagina de OscarGod</p>
       <p class="lead">
-        <a class="btn btn-primary btn-lg" href="#" role="button">Continuar</a>
+        <a
+          class="btn btn-primary btn-lg"
+          href="#"
+          role="button"
+          onclick="abrirVentanaEmergente()"
+          >Continuar</a
+        >
       </p>
 
-      <!-- Botones personalizados -->
+      <!-- Solo queda el botón de la calculadora -->
       <a href="calculadora.html" class="btn-calculadora">Ir a la Calculadora</a>
-      <a href="perfil.html" class="btn-calculadora">Ver Perfil</a>
     </div>
   </body>
 </html>
+
+
 
 
 
